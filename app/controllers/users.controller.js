@@ -58,10 +58,10 @@ exports.createUser = async (req, res) => {
 
 exports.getUsers = async (req, res) => {
     try {
-        const userAttributes = ["id", "firstName", "lastName", "email", "role", "isActive", "createdAt", "updatedAt"];
+        const users = await db.sequelize.query("SELECT * FROM public.users", {
+            type: db.Sequelize.QueryTypes.SELECT
+        });
 
-        const users = await db.users.query('SELECT * FROM users WHERE email = `email`');
-        
         const responseData = users.map(user => ({
             id: user.id,
             firstName: user.firstName,

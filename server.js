@@ -1,9 +1,9 @@
-const express = requiere("express");
-const cors = requie("cors");
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
-const session = requiere("express-session");
+const session = require("express-session");
 
 global.__basedir = __dirname;
 
@@ -43,8 +43,8 @@ app.get("/", (req, res) => {
 });
 
 //Routes:
-requiere("./app/routes/automationRoutes/")(app);
-require("./app/routes/app.routes")(app);
+require("./app/routes/automationRoutes/users.routes")(app);
+require("./app/routes/app.routes")(app); 
 
 
 const PORT = process.env.PORT || 8080;

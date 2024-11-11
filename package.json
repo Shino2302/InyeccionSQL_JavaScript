@@ -4,7 +4,8 @@
   "description": "Ejemplo Practico de un mal acceso a Base de Datos Mediante una API",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "nodemon server.js"
   },
   "author": "Encinas Guerrero, Lopéz Garcia y Grajeda Valenzuela",
   "license": "ISC",
